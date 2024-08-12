@@ -1,0 +1,42 @@
+---
+const {recipe} = Astro.props;
+---
+
+<div>
+  <h2>Information:</h2>
+
+  <div id="grid-container">
+    <div>
+      <h3>Cuisine:</h3>
+      <p>{recipe.cuisine}</p>
+    </div>
+    <div>
+      <h3>Tags:</h3>
+      <p>{recipe.tags.join(", ")}</p>
+    </div>
+    <div>
+      <h3>Servings:</h3>
+      <p>{recipe.servings} servings</p>
+    </div>
+    <div>
+      <h3>Rating:</h3>
+      <p>{recipe.rating} of 5 by {recipe.reviewCount} people</p>
+    </div>
+    <div>
+      <h3>Preparation Time:</h3>
+      <p>{recipe.prepTimeMinutes} minutes</p>
+    </div>
+    <div>
+      <h3>Cook Time:</h3>
+      <p>{recipe.cookTimeMinutes} minutes</p>
+    </div>
+    <div>
+      <h3>Total Time:</h3>
+      <p>{recipe.prepTimeMinutes + recipe.cookTimeMinutes} minutes</p>
+    </div>
+    <div>
+      <h3>Calories:</h3>
+      <p>{recipe.caloriesPerServing} calories per serving</p>
+    </div>
+  </div>
+</div>
