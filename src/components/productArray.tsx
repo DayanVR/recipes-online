@@ -3,10 +3,14 @@ import separateByMeal from "./separatedByMeal";
 import FormMeals from "./formMeals";
 import type { ProductInfo } from "../types";
 
+type SeparatedMeals = {
+  [key: string]: ProductInfo[];
+};
+
 const ProductArray = () => {
-  const [displayMeals, setDisplayMeals] = useState([]);
+  const [displayMeals, setDisplayMeals] = useState<ProductInfo[]>([]);
   const [mealsKeys, setMealsKeys] = useState<string[]>([]);
-  const [separatedMeals, setSeparatedMeals] = useState({});
+  const [separatedMeals, setSeparatedMeals] = useState<SeparatedMeals>({});
   const [selectedMeal, setSelectedMeal] = useState<string>("");
 
   useEffect(() => {
