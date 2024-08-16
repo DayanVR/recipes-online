@@ -1,1 +1,1 @@
-Online recipes website built with Astro and Tailwind CSS. Hosted in https://chefs-online.netlify.app
+Online recipes website built with Astro and Tailwind CSS. Website: https://chefs-online.netlify.app
