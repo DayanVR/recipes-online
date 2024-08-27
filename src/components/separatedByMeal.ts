@@ -6,7 +6,6 @@ type MealCategory = {
 
 export default function separateByMeal(meals: ProductInfo[]): MealCategory {
   return meals.reduce<MealCategory>((result, meal) => {
-    // Ensure meal.mealType is an array
     const mealTypes = Array.isArray(meal.mealType) ? meal.mealType : [meal.mealType];
     
     mealTypes.forEach((type) => {
